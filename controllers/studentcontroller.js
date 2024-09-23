@@ -21,7 +21,24 @@ async function getStudents(req, res) {
    }
 }
 
+
+async function getStudentForEdit(req, res) {
+   try{
+        let id = req.params.id;
+        console.log(id);
+        let student = await Student.findOne({_id:id});
+        console.log(student);
+        res.render('studentforupdate',{
+         student:student
+        });
+
+   }catch(err){
+      console.log(err,'error');
+   }
+}
+
 module.exports = {
     addStudent,
-    getStudents
+    getStudents,
+    getStudentForEdit
 }

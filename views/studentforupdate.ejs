@@ -1,0 +1,44 @@
+<%- include('./base/header.ejs')  %>
+<div class="container">
+    <div class="alert bg-success my-3">
+         <h2 class="text-center" style="color: white;">Add New Student</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col" style="background-color: #a2b9bc ; border-radius: 2%;">
+            <form action="/add/student" method="post">
+                <div>
+                    <label for="" class="form-label">Roll NO</label>
+                    <input type="text" name="rollNo" class="form-control" value="<%= student.rollNo %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">First Name</label>
+                    <input type="text" name="firstName" class="form-control" value="<%= student.firstName %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" value="<%= student.lastName %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Father Name</label>
+                    <input type="text" name="fatherName" class="form-control" value="<%= student.fatherName %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Adhar Card No</label>
+                    <input type="text" name="adhrCardNo" class="form-control"  value="<%= student.adhrCardNo %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Mobile Number</label>
+                    <input type="text" name="mobileNo" class="form-control" value="<%= student.mobileNo %>">
+                </div>
+                <input type="submit" value="Add student" class="btn btn-warning my-3 w-100"></input>
+
+            </form>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<%- include('./base/footer.ejs')  %>
