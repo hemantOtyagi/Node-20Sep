@@ -1,14 +1,14 @@
 <%- include('./base/header.ejs')  %>
 <div class="container">
     <div class="alert bg-success my-3">
-         <h2 class="text-center" style="color: white;">Add New Student</h2>
+         <h2 class="text-center" style="color: white;">Update Students</h2>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col"></div>
         <div class="col" style="background-color: #a2b9bc ; border-radius: 2%;">
-            <form action="/add/student" method="post">
+            <form action="/update/student/<%= student._id %>" method="post">
                 <div>
                     <label for="" class="form-label">Roll NO</label>
                     <input type="text" name="rollNo" class="form-control" value="<%= student.rollNo %>">
@@ -33,7 +33,7 @@
                     <label for="" class="form-label">Mobile Number</label>
                     <input type="text" name="mobileNo" class="form-control" value="<%= student.mobileNo %>">
                 </div>
-                <input type="submit" value="Add student" class="btn btn-warning my-3 w-100"></input>
+                <input type="submit" value="Update Student" class="btn btn-warning my-3 w-100"></input>
 
             </form>
             

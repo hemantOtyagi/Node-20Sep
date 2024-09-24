@@ -18,4 +18,16 @@ router.get('/students',(req, res)=>{
 router.get('/edit/student/page/:id',(req, res)=>{
     studentController.getStudentForEdit(req, res);
 })
+
+router.post('/update/student/:id',(req, res)=>{
+    studentController.updateStudent(req, res);
+})
+
+router.get('/delete/student/page/:id',(req, res)=>{
+    studentController.deleteStudent(req, res)
+});
+
 module.exports = router
+
+
+//form se data bs get or post se hee a skta hai
